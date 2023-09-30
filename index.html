@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Generator</title>
+    <script src="https://kit.fontawesome.com/f8a9ff872a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <button id="btn">Change<br> Background<br> Colour..</button>
+    <p id="para"></p>
+    <footer>All Rights Reserved By Shaik Hussain</footer>
+    <script src="./script.js"></script>
+
+    <script>
+        const btn = document.getElementById("btn");
+        const para = document.getElementById("para");
+
+        const changeBackground = () => {
+            const hexVal = Math.floor(Math.random() * 0xffffff).toString(16);
+            document.body.style.background = `#${hexVal}`;
+            para.textContent = `Color Code.. ${hexVal}`;
+        }
+        btn.addEventListener("click", changeBackground);
+    </script>
+</body>
+
+</html>
